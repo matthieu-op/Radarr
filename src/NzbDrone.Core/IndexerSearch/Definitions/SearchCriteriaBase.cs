@@ -28,7 +28,7 @@ namespace NzbDrone.Core.IndexerSearch.Definitions
             var cleanTitle = BeginningThe.Replace(title, string.Empty);
 
             cleanTitle = cleanTitle.Replace("&", "and");
-            cleanTitle = SpecialCharacter.Replace(cleanTitle, "");
+            cleanTitle = SpecialCharacter.Replace(cleanTitle, " ");
             cleanTitle = NonWord.Replace(cleanTitle, "+");
 
             //remove any repeating +s
